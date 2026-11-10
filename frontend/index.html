@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parcial II · Estructuras de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="menu">
+    <h1>Parcial II</h1>
+    <p class="sub">Estructuras de Datos · UniQuindío</p>
+    <nav>
+        <a href="#p1">1. Últimas confirmadas</a>
+        <a href="#p2">2. Segmento de historial</a>
+        <a href="#p3">3. Selección de solicitudes</a>
+        <a href="#p4">4. ABB · equipos por rango</a>
+        <a href="#p5">5. ABB y AVL con FE</a>
+    </nav>
+</aside>
+
+<main>
+    <section id="p1" class="tarjeta">
+        <h2>1. Depuración del historial <span class="etiqueta">Pila</span></h2>
+        <form data-punto="1">
+            <label>Operaciones (desde el tope)
+                <input name="ops" value="O5 CONFIRMADA, O4 ANULADA, O3 CONFIRMADA, O2 CONFIRMADA, O1 ANULADA">
+            </label>
+            <label class="corto">n <input name="n" type="number" value="2"></label>
+            <button>Calcular</button>
+        </form>
+        <div class="resultado"></div>
+    </section>
+
+    <section id="p2" class="tarjeta">
+        <h2>2. Segmento del historial <span class="etiqueta">Pila</span></h2>
+        <form data-punto="2">
+            <label>Acciones (desde el tope) <input name="acciones" value="A6, A5, A4, A3, A2, A1"></label>
+            <label class="corto">Inicio <input name="inicio" type="number" value="2"></label>
+            <label class="corto">Fin <input name="fin" type="number" value="4"></label>
+            <button>Calcular</button>
+        </form>
+        <div class="resultado"></div>
+    </section>
+
+    <section id="p3" class="tarjeta">
+        <h2>3. Selección de solicitudes <span class="etiqueta">Cola</span></h2>
+        <form data-punto="3">
+            <label>Solicitudes (código prioridad minutos)
+                <input name="solicitudes" value="S1 NORMAL 10, S2 ALTA 30, S3 ALTA 15, S4 NORMAL 5">
+            </label>
+            <label class="corto">Minutos <input name="minutos" type="number" value="25"></label>
+            <button>Calcular</button>
+        </form>
+        <div class="resultado"></div>
+    </section>
+
+    <section id="p4" class="tarjeta">
+        <h2>4. Equipos por rango <span class="etiqueta">ABB</span></h2>
+        <form data-punto="4">
+            <label>Códigos a insertar <input name="valores" value="50, 30, 70, 20, 40, 60, 80, 55, 65"></label>
+            <label class="corto">Inferior <input name="inf" type="number" value="35"></label>
+            <label class="corto">Superior <input name="sup" type="number" value="65"></label>
+            <label class="corto">Eliminar <input name="eliminar" type="number" value="50"></label>
+            <button>Calcular</button>
+        </form>
+        <div class="resultado"></div>
+    </section>
+
+    <section id="p5" class="tarjeta">
+        <h2>5. Árboles ABB y AVL <span class="etiqueta">FE = h(der) − h(izq)</span></h2>
+        <form data-punto="5">
+            <label>Lista de nodos
+                <input name="valores" value="45-33-29-28-22-32-34-39-36-43-60-45-46-50-48-55-70-69-65-86-79-88">
+            </label>
+            <label class="corto">Eliminar del AVL <input name="eliminar" type="number" value="45"></label>
+            <button>Calcular</button>
+        </form>
+        <div class="resultado"></div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
